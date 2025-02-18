@@ -1,0 +1,259 @@
+다음은 주어진 React 코드를 HTML, CSS, JavaScript로 변환한 상세 페이지입니다. React의 컴포넌트 구조를 HTML로 변환하고, Tailwind CSS 스타일을 일반 CSS로 변환하며, 동적인 부분은 JavaScript로 구현했습니다. 또한, 페이지가 반응형이고 시각적으로 매력적으로 보이도록 설계했습니다.
+
+---
+
+### **index.html**
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 활용 영어 교육 콘텐츠 제작 & 출판 커뮤니티</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <h1 class="hero-title">AI 활용 영어 교육 콘텐츠 제작 & 출판 커뮤니티</h1>
+      <p class="hero-subtitle">생성형 AI로 만드는 나만의 교육 콘텐츠</p>
+    </div>
+
+    <!-- Content Creation Section -->
+    <div class="card">
+      <div class="card-header">
+        <img src="https://via.placeholder.com/24" alt="Pen Tool" class="icon">
+        <h2 class="card-title">콘텐츠 제작 분야</h2>
+      </div>
+      <div class="card-content grid">
+        <div class="card bg-gray">
+          <div class="card-header">
+            <h3 class="card-title">그림책 제작</h3>
+          </div>
+          <div class="card-content">
+            <div class="section">
+              <h4 class="section-title">AI 도구</h4>
+              <ul class="list">
+                <li>MidJourney/DALL-E 일러스트 생성</li>
+                <li>GPT-4 스토리라인 개발</li>
+                <li>AI 난이도 분석기</li>
+                <li>연령별 어휘 체커</li>
+              </ul>
+            </div>
+            <div class="section">
+              <h4 class="section-title">제작 가능 콘텐츠</h4>
+              <ul class="list">
+                <li>창작 동화책</li>
+                <li>파닉스 리더스</li>
+                <li>주제별 리딩 시리즈</li>
+                <li>문법 스토리북</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-gray">
+          <div class="card-header">
+            <h3 class="card-title">워크북 개발</h3>
+          </div>
+          <div class="card-content">
+            <div class="section">
+              <h4 class="section-title">AI 도구</h4>
+              <ul class="list">
+                <li>자동 문제 생성기</li>
+                <li>난이도 조절 AI</li>
+                <li>답안 해설 생성기</li>
+                <li>교사용 가이드 생성</li>
+              </ul>
+            </div>
+            <div class="section">
+              <h4 class="section-title">제작 가능 콘텐츠</h4>
+              <ul class="list">
+                <li>독해 워크북</li>
+                <li>문법 연습장</li>
+                <li>어휘 학습지</li>
+                <li>테마별 액티비티</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-gray">
+          <div class="card-header">
+            <h3 class="card-title">교육 자료</h3>
+          </div>
+          <div class="card-content">
+            <div class="section">
+              <h4 class="section-title">AI 도구</h4>
+              <ul class="list">
+                <li>토론 주제 생성기</li>
+                <li>수업 계획 도우미</li>
+                <li>평가 문항 제작기</li>
+                <li>학습 게임 생성기</li>
+              </ul>
+            </div>
+            <div class="section">
+              <h4 class="section-title">제작 가능 콘텐츠</h4>
+              <ul class="list">
+                <li>수업 지도안</li>
+                <li>평가 자료</li>
+                <li>활동지</li>
+                <li>게이미피케이션 요소</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="terminal">
+        <div class="terminal-header">
+          <div class="terminal-button terminal-close"></div>
+          <div class="terminal-button terminal-minimize"></div>
+          <div class="terminal-button terminal-maximize"></div>
+        </div>
+        <div class="code-block">
+          <div class="code-line">const aiTools = {</div>
+          <div class="code-line">  imageGen: ['MidJourney', 'DALL-E'],</div>
+          <div class="code-line">  textGen: ['GPT-4', 'Claude'],</div>
+          <div class="code-line">  analysis: ['AI Difficulty Analyzer']</div>
+          <div class="code-line">};</div>
+        </div>
+      </div>
+    </div>
+
+    다음은 `index.html`, `styles.css`, `script.js`의 나머지 부분을 이어서 작성한 내용입니다. React 코드의 구조를 유지하면서 HTML, CSS, JavaScript로 변환하고, 반응형 디자인과 동적 기능을 추가했습니다.
+
+---
+
+### **index.html (계속)**
+```html
+    <!-- Publishing Path Section -->
+    <div class="card">
+      <div class="card-header">
+        <img src="https://via.placeholder.com/24" alt="Library" class="icon">
+        <h2 class="card-title">출판 진행 과정</h2>
+      </div>
+      <div class="card-content grid">
+        <div class="phase">
+          <h3 class="phase-title">
+            <span class="phase-number">1</span> 기획 단계
+          </h3>
+          <p class="phase-duration">예상 소요 기간: 2-3주</p>
+          <ul class="list">
+            <li>시장 조사 AI 분석</li>
+            <li>경쟁작 분석 리포트</li>
+            <li>독자층 타겟팅</li>
+            <li>콘텐츠 전략 수립</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <h3 class="phase-title">
+            <span class="phase-number">2</span> 제작 단계
+          </h3>
+          <p class="phase-duration">예상 소요 기간: 4-8주</p>
+          <ul class="list">
+            <li>AI 도구 활용 제작</li>
+            <li>전문가 피드백</li>
+            <li>시범 사용 및 수정</li>
+            <li>품질 검수</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <h3 class="phase-title">
+            <span class="phase-number">3</span> 출판 준비
+          </h3>
+          <p class="phase-duration">예상 소요 기간: 2-3주</p>
+          <ul class="list">
+            <li>출판사 매칭</li>
+            <li>저작권 검토</li>
+            <li>마케팅 전략 수립</li>
+            <li>사전 홍보</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Community Benefits Section -->
+    <div class="card">
+      <div class="card-header">
+        <img src="https://via.placeholder.com/24" alt="Star" class="icon">
+        <h2 class="card-title">커뮤니티 혜택</h2>
+      </div>
+      <div class="card-content grid">
+        <div class="benefit">
+          <div class="benefit-header">
+            <img src="https://via.placeholder.com/24" alt="Bot" class="icon">
+            <h3 class="benefit-title">AI 도구 액세스</h3>
+          </div>
+          <ul class="list">
+            <li>프리미엄 AI 도구 구독 지원</li>
+            <li>맞춤형 프롬프트 라이브러리</li>
+            <li>전문가 기술 지원</li>
+            <li>도구 활용 워크숍</li>
+          </ul>
+        </div>
+        <div class="benefit">
+          <div class="benefit-header">
+            <img src="https://via.placeholder.com/24" alt="Users" class="icon">
+            <h3 class="benefit-title">전문가 네트워크</h3>
+          </div>
+          <ul class="list">
+            <li>출판 전문가 멘토링</li>
+            <li>동료 교사 피드백</li>
+            <li>공동 제작 프로젝트</li>
+            <li>정기 네트워킹</li>
+          </ul>
+        </div>
+        <div class="benefit">
+          <div class="benefit-header">
+            <img src="https://via.placeholder.com/24" alt="Rocket" class="icon">
+            <h3 class="benefit-title">출판 지원</h3>
+          </div>
+          <ul class="list">
+            <li>출판사 네트워크 연결</li>
+            <li>저작권 법률 자문</li>
+            <li>마케팅 전략 컨설팅</li>
+            <li>유통 채널 확보</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+      <div class="card cta-card">
+        <div class="card-content">
+          <h2 class="cta-title">나만의 교육 콘텐츠를 출판하세요</h2>
+          <p class="cta-subtitle">AI 도구와 출판 전문가의 도움으로 더 쉽게 시작할 수 있습니다</p>
+          <button class="cta-button" onclick="showConsultationForm()">무료 컨설팅 받기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Consultation Form (Hidden by default) -->
+    <div id="consultationForm" class="consultation-form hidden">
+      <div class="form-container">
+        <h2 class="form-title">무료 컨설팅 신청</h2>
+        <form id="consultationSubmit" onsubmit="submitForm(event)">
+          <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">문의 내용</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">제출하기</button>
+        </form>
+        <button class="close-button" onclick="closeConsultationForm()">닫기</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
